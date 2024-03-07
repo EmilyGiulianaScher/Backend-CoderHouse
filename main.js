@@ -1,7 +1,11 @@
+const fs = require('fs').promises;
+const UserManager = require('./ManagerUsuarios');
+
 class ProductManager {
-    constructor(products = [] , nextId = 1) {
-        this.products = products;
-        this.nextId = nextId;
+    constructor(path) {
+        this.path = path;
+        this.products = []; // Definición del arreglo de productos
+        this.userManager = new UserManager('Usuarios.json');
     }
 
     addProduct(title, description, price, thumbnail, code, stock) {
@@ -15,10 +19,11 @@ class ProductManager {
                 code,
                 stock
             };
-            this.products.push(product);
+            this.products.push(product); // Agregar producto al arreglo de productos
             console.log("Producto agregado:", product);
         }
     }
+
 
     validateFields(title, description, price, thumbnail, code, stock) {
         if (!title || !description || !price || !thumbnail || !code || !stock) {
@@ -58,3 +63,6 @@ productManager.addProduct("shorts", "negro, talle S", 15, "imagen2.jpg", "DEF456
 console.log("Todos los productos:", productManager.getProducts());
 console.log("Producto con id 1:", productManager.getProductById(1));
 console.log("Producto con id 3:", productManager.getProductById(3)); // Debería mostrar "Producto no encontrado."
+
+
+module.exports = ProductManager;
