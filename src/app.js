@@ -1,17 +1,19 @@
 /**npm administrador de paquetes */
 const express = require('express');
-const ProductManager = require('./main'); // Importar la clase ProductManager desde main.js
-
+const ProductManager = require('./ProductManager');
+const PORT = 8080;
+const path = require("path");
 const app = express();
-const PORT = 3000;
 
-const productManager = new ProductManager(); // Crear una instancia de ProductManager
+
+
+const productos = new ProductManager(path.join(__dirname, "../products.json"));
 
 // Endpoint para obtener todos los productos
 app.get('/products', async (req, res) => {
     try {
         const limit = req.query.limit ? parseInt(req.query.limit) : undefined;
-        const products = await productManager.getProducts(limit);
+        const products = await productos.getProducts(limit);
         res.json(products);
     } catch (error) {
         res.status(500).json({ error: error.message });
@@ -22,7 +24,7 @@ app.get('/products', async (req, res) => {
 app.get('/products/:pid', async (req, res) => {
     try {
         const productId = parseInt(req.params.pid);
-        const product = await productManager.getProductById(productId);
+        const product = await productos.getProductById(productId);
         if (product) {
             res.json(product);
         } else {
@@ -34,5 +36,5 @@ app.get('/products/:pid', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Servidor escuchando en el puerto ${PORT}`);
+    console.log(`Servidor escuchando en el puerto http://localhost:${PORT}`);
 });
