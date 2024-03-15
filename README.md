@@ -7,10 +7,10 @@ Emily Giuliana Scher
 
 ## Desafíos
 
-Desafío 1 : terminado ​👍
+- Desafío 1 : terminado ​👍
 
-Desafío 2 : terminado 👌​
+- Desafío 2 : terminado 👌​
 
-Desafío 3 : terminado 👌​
+- Desafío 3 : terminado 👌​
 
-Desafío 4 : pendiente ⚔️​
+- Desafío 4 : pendiente ⚔️​
