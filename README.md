@@ -1,5 +1,11 @@
-Programación Backend CODERHOUSE- Comisión 53130
-Emily Giuliana Scher 
+# Programación Backend CODERHOUSE - Comisión 53130
+
+### Autora
+Emily Giuliana Scher
+
+---
+
+## Desafíos
 
 Desafío 1 : terminado ​👍
 
