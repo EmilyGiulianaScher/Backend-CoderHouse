@@ -11,6 +11,8 @@ Emily Giuliana Scher
 
 - Desafío 2 : terminado 👌​
 
-- Desafío 3 : terminado 👌​
+- Desafío 3 : terminado 👍
 
-- Desafío 4 : pendiente ⚔️​
+- Primera Pre-entrega del Proyecto Final: Entregado 👌​
+  
+- Desafío 4 : pendiente ...
