@@ -41,7 +41,7 @@ router.post("/carts/:cid/product/:pid", async (req, res) => {
     const quantity = req.body.quantity || 1; 
 
     try {
-        const actualizarCarrito = await cartManager.agregarProductoAlCarrito(cartId,productId, quantity);
+        const actualizarCarrito = await cartManager.agregarProductAlCarrito(cartId,productId, quantity);
         res.json(actualizarCarrito.products);
     } catch (error) {
         res.status(500).json({

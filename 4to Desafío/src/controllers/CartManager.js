@@ -53,17 +53,17 @@ class CartManager {
         }
     }
 
-    async agregarProductoAlCarrito(carritoId, productoId, quantity = 1) {
-        if (typeof carritoId !== 'number' || typeof productoId !== 'number') {
+    async agregarProductAlCarrito(carritoId, productId, quantity = 1) {
+        if (typeof carritoId !== 'number' || typeof productId !== 'number') {
             throw new Error('Los IDs del carrito y del producto deben ser números.');
         }
         const carrito = await this.getCarritoById(carritoId);
-        const existeProducto = carrito.products.find(p => p.product === productoId);
+        const existeProduct = carrito.products.find(p => p.product === productId);
 
-        if (existeProducto) {
-            existeProducto.quantity += quantity;
+        if (existeProduct) {
+            existeProduct.quantity += quantity;
         } else {
-            carrito.products.push({ product: productoId, quantity });
+            carrito.products.push({ product: productId, quantity });
         }
 
         await this.guardarCarritos();

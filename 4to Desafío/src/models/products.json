@@ -63,24 +63,6 @@
     "stock": 28
   },
   {
-    "id": 8,
-    "title": "producto 8",
-    "description": "Este es el producto 8",
-    "price": 190,
-    "thumbnail": "Imagen 8",
-    "code": "stu901",
-    "stock": 12
-  },
-  {
-    "id": 9,
-    "title": "producto 9",
-    "description": "Este es el producto 9",
-    "price": 310,
-    "thumbnail": "Imagen 9",
-    "code": "vwx234",
-    "stock": 35
-  },
-  {
     "id": 10,
     "title": "producto 10",
     "description": "Este es el producto 10",

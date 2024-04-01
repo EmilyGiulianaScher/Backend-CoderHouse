@@ -36,10 +36,10 @@ router.get('/products/:pid', async (req, res) => {
 //3) Agregar un nuevo producto: 
 
 router.post("/products", async (req, res) => {
-    const nuevoProducto = req.body; 
+    const nuevoProduct = req.body; 
 
     try {
-        await productManager.addProduct(nuevoProducto);
+        await productManager.addProduct(nuevoProduct);
         res.status(201).json({message: "Producto agregado exitosamente"});
     } catch (error) {
         res.status(500).json({error: "Error interno del servidor"});
@@ -51,10 +51,10 @@ router.post("/products", async (req, res) => {
 
 router.put("/products/:pid", async (req, res) => {
     const id = req.params.pid;
-    const productoActualizado = req.body; 
+    const productActualizado = req.body; 
 
     try {
-        await productManager.updateProduct(parseInt(id), productoActualizado);
+        await productManager.updateProduct(parseInt(id), productActualizado);
         res.json({
             message: "Producto actualizado correctamente"
         });
