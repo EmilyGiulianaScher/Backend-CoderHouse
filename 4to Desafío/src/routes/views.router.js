@@ -1,3 +1,4 @@
+
 const express =  require("express");
 const router = express.Router();
 
@@ -6,7 +7,8 @@ const ProductManager = require("../controllers/ProductManager");
 const productManager = new ProductManager("./src/models/products.json");
 
 //ruta
-router.get("/",  async (req, res) => {
+
+router.get("/H",  async (req, res) => {
 
     try {
         const products = await productManager.getProducts();    

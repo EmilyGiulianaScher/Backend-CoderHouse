@@ -62,3 +62,22 @@ io.on("connection", async (socket) => {
         socket.emit("products", await productManager.getProducts());
     })
 })
+
+
+
+
+
+
+
+
+
+
+
+// nos conectamos a MongoAtlas por medio de mongoose:
+
+const mongoose = require("mongoose");
+
+mongoose.connect("mongodb+srv://emilygiulianascher:manchita@cluster0.hovlhnt.mongodb.net/MiTienda?retryWrites=true&w=majority&appName=Cluster0")
+    .then(() => console.log("Conectados a la BD!!"))
+    .catch((error) => console.log("Tenemos un error, VAMOS A MORIR: ", error))
+
